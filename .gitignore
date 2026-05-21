@@ -1,0 +1,23 @@
+# agent-bridge gitignore — keep runtime state and ephemera out of git.
+
+# Broker runtime state (SQLite, JSONL events, worktrees).
+state/
+worktrees/
+
+# uv / Python build artifacts.
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Editor / OS.
+.DS_Store
+*.swp
+
+# CP2 throwaway state (only the docs are tracked).
+# Probe scripts already live in repo-root scratchpad/, which is gitignored repo-wide.
